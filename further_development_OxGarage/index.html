@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Further development on OxGarage: TEIGarage and MEIGarage</title>
+		<meta name="description" content="Presentation">
+		<meta name="author" content="Anne Ferger">
+		<link rel="stylesheet" href="../reveal/dist/reset.css">
+		<link rel="stylesheet" href="../reveal/dist/reveal.css">
+		<link rel="stylesheet" href="../reveal/dist/theme/night.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+		<!-- Printing and PDF exports -->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#1e888aff">
+					<h3>Further development on OxGarage</h3>
+					<h4>TEIGarage and MEIGarage</h4>
+					<br />
+					<br />
+					<p>
+						<small>Anne Ferger, Daniel Röwenstrunk, Peter Stadler | Universität
+							Paderborn</small>
+					</p>
+					<p>
+						<small>Slides: <a href="https://anneferger.github.io/OxTEIMEIGarage/"
+								>anneferger.github.io/OxTEIMEIGarage</a></small>
+					</p>
+				</section>
+				<section data-background-color="#1e888aff">
+					<section>
+						<h3>Motivation</h3>
+					</section>
+					<section>
+						<h4>Main Goal</h4>
+						<p>MEIGarage next to the (TEI-)OxGarage with further/different
+							functionality, but the same core (concept, code), while also allowing
+							for updates or bugfixes to the core</p>
+					</section>
+					<section>
+						<h4>Starting Point</h4>
+						<ul>
+							<li><a href="https://github.com/TEIC/oxgarage">TEIC/oxgarage</a> and <a
+									href="https://github.com/Edirom/oxgarage">Edirom/oxgarage</a>
+								(MEI, fork of OxGarage, branch ‘meigarage’) </li>
+							<li>fork of OxGarage was not a perfect solution: problems with
+								harmonizing core changes and new functionality, maintenance </li>
+						</ul>
+					</section>
+					<section>
+						<h4>Further Goals</h4>
+						<ul>
+							<li>sustainability of the OxGarage software</li>
+							<li>further functionality that can be used by other projects as well
+								(e.g. customization in mei)</li>
+							<li>other communities and use cases</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background-color="#1e888aff">
+					<section>
+						<h3>Modularization</h3>
+					</section>
+					<section>
+						<h4>Modularization</h4>
+						<!-- TODO -->
+						<ul>
+							<li>modularization of code repo</li>
+							<li>extracting different parts/modules to their own git repositories
+								while keeping the (git) history of only those parts</li>
+							<li>storing artifacts of the modules in GitHub directly</li>
+							<li>allowing for merging of bugfixing and further functionality, but not
+								configuration</li>
+						</ul>
+						<p>➞ facilitate development on specific parts only</p>
+					</section>
+					<section>
+						<h3>Structure</h3>
+						<img data-src="images/structure.png" height="540" width="960" />
+					</section>
+					<section>
+						<h3>Location of the different modules</h3>
+						<ul>
+							<li>Git repositories are located at the TEIC or Edirom Github
+								organizations respectively</li>
+							<li> MEIGarage and TEIGarage <a
+									href="https://github.com/Edirom/MEIGarage/blob/main/doc/code-structure.md"
+									>code structure</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background-color="#1e888aff">
+					<section>
+						<h3>Simplification of configuration project</h3>
+					</section>
+					<section>
+						<h3>OxGarage to TEIGarage and MEIGarage</h3>
+						<ul>
+							<li>each different use case of the OxGarage needs its own configuration
+								project</li>
+							<li>to distinguish from OxGarage: new names TEIGarage and MEIGarage</li>
+							<li>Docker images for each of the projects, GUI/webclient can be
+								added</li>
+							<li>adaption to other use cases is facilitated</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background-color="#1e888aff">
+					<section>
+						<h3>Further development of functionality</h3>
+					</section>
+					<section>
+						<!-- TODO -->
+						<h4>From the MEI perspective, useful for TEI community as well</h4>
+						<ul>
+							<li>recognizers for different files (could be useful for other use cases
+								as well)</li>
+							<li>simplification of configuration module</li>
+							<li>update of dependencies</li>
+							<li>supplying stylesheets for conversions in Dockerimage</li>
+						</ul>
+					</section>
+				</section>
+				<!-- Contact -->
+				<section data-background-color="#1e888aff">
+					<section>
+						<h4>Links</h4>
+						<ul>
+							<li><a href="https://github.com/TEIC/TEIGarage">github.com/TEIC/TEIGarage</a></li>
+							<li><a href="https://github.com/Edirom/MEIGarage">github.com/Edirom/MEIGarage</a></li>
+							<li><a href="https://github.com/Edirom/MEIGarage/blob/main/doc/code-structure.md">Code Structure</a></li>
+						</ul>
+						<p></p>
+						<h4>Contact</h4>
+						<p></p>
+						<a href="https://anneferger.github.io/">Anne Ferger</a>
+						<p>
+							<a href="mailto:anne.ferger@uni-paderborn.de"
+								>anne.ferger@uni-paderborn.de</a>
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+		<script src="../reveal/dist/reveal.js"></script>
+		<script src="../reveal/plugin/notes/notes.js"></script>
+		<script src="../reveal/plugin/markdown/markdown.js"></script>
+		<script src="../reveal/plugin/highlight/highlight.js"></script>
+		<script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+                slideNumber: true,
+                
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins:[RevealMarkdown, RevealHighlight, RevealNotes]
+            });</script>
+	</body>
+</html>
