@@ -1,4 +1,4 @@
-# Presentation slides and further documentation on the development of TEIGarage and MEIGarage
+# Slides & documentation on the development of TEIGarage & MEIGarage
 
 ## Slides
 
