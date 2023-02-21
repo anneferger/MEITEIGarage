@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>MEIGarage</title>
+	<meta name="description" content="Presentation">
+	<meta name="author" content="Anne Ferger">
+	<link rel="stylesheet" href="../reveal/dist/reset.css">
+	<link rel="stylesheet" href="../reveal/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal/dist/theme/night.css">
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	<!-- Printing and PDF exports -->
+	<style>
+		.left {
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-color="#1e888aff">
+				<h3>MEIGarage as an example of collaboration on long-living research software in different research
+					communities</h3>
+				<br />
+				<br />
+				<p>
+					<small>Anne Ferger, Daniel Röwenstrunk | Universität
+						Paderborn</small>
+				</p>
+				<p>
+					<small>Slides: <a
+							href="https://anneferger.github.io/MEITEIGarage/deRSE23/">anneferger.github.io/MEITEIGarage/deRSE23/</a></small>
+				</p>
+			</section>
+			<section data-background-color="#1e888aff">
+				<section>
+					<h3>EGE to OxGarage</h3>
+				</section>
+				<section>
+					<p class="left"><a href="https://github.com/TEIC/oxgarage">TEIC/oxgarage</a> was created based on
+						the <a href="https://enrich-ege.sourceforge.net/">ENRICH Garage Engine</a> by the <a
+							href="https://tei-c.org/">Text Encoding Initiative (TEI) community</a>
+						over 10 years ago and is used in many different contexts, e.g.
+					</p>
+					<div class="left">
+						<ul class="left">
+							<li><a href="https://github.com/ADHO/dhconvalidator">DH Convalidator</a></li>
+							<li><a href="https://github.com/TEIC/romajs">Roma</a></li>
+						</ul>
+					</div>
+					<p>
+						<a id="teiLink" href="https://tei-c.org" target="_blank"><img alt="Text Encoding Initiative"
+								id="teiLogo" src="https://tei-c.org/Vault/Logos/TEIlogo.svg" width="105"
+								height="90" /></a>
+					</p>
+				</section>
+				<section>
+					<p><img
+						src="images/ege.png"></p>
+				</section>
+				<section>
+					<h4>EGE</h4>
+					<ul>
+						<li>written in Java</li>
+						<li>licensed</li>
+						<li>maven based documentation still available</li>
+					</ul>
+				</section>
+				<section>
+					<h4>OxGarage</h4>
+					<ul>
+						<li>written in Java</li>
+						<li>contact to some original developers</li>
+						<li>research supporting software</li>
+						<li>published on GitHub and licensed</li>
+						<li>maven based documentation available</li>
+					</ul>
+				</section>
+				<section>
+					<h3>OxGarage to MEIGarage</h3>
+				</section>
+				<section>
+					<p class="left"><a href="https://github.com/Edirom/oxgarage">Edirom/oxgarage</a> was created
+						based on OxGarage by the <a href="https://music-encoding.org/">Music Encoding Initiative (MEI)
+							community</a>
+					</p>
+					<p>
+						<a id="meiLink" href="https://music-encoding.org" target="_blank"><img
+								alt="Music Encoding Initiative" id="meiLogo"
+								src="https://music-encoding.org/pix/meilogo-inverted.png" height="69" /></a>
+						<a id="vifeLink" href="https://edirom.de" target="_blank"><img alt="ViFE" id="vifeLogo"
+								src="https://meigarage.edirom.de/img/vife-logo.5a29fca4.svg" height="69" /></a>
+					</p>
+				</section>
+			</section>
+			<section data-background-color="#1e888aff">
+				<section>
+					<h3>OxGarage in NFDI4Culture</h3>
+				</section>
+				<section>
+					<h4>Goals</h4>
+					<p>add further MEIGarage functionality</p>
+					<p>using (<a href="https://github.com/TEIC/oxgarage">OxGarage</a>) as a base for
+						other research communities while allowing for more collaboration on code and making it more
+						technically sustainable and FAIR
+					</p>
+				</section>
+				<section>
+					<h4>Working on MEIGarage in NFDI4Culture</h4>
+					<p class="left"><small> In the framework of the <a href="https://nfdi4culture.de">NFDI4Culture
+								project</a> measures are
+							taken
+							to achieve a more sustainable and
+							adaptable code base.
+							These measures include a modularized, GitHub-based setup using CI and badges and checklists
+							for FAIR software. Meetings were held
+							for
+							community building and sharing new developments and available documentation.
+							The process of creating new plugins or additional "Garages" for other research communities
+							is used
+							to
+							further evaluate the benefit of the measures and checking for necessary
+							modifications.
+						</small></p>
+					<p> <a id="nfdi4cLink" href="https://nfdi4culture.de" target="_blank"><img
+								src="https://nfdi4culture.de/typo3conf/ext/culture_portal/Resources/Public/Build/images/n4c-logo-white.7dd674fa.svg"
+								alt="Logo NFDI for Culture" height="69" /></a></p>
+				</section>
+			</section>
+			<section data-background-color="#1e888aff">
+				<section>
+					<h3>Technical Sustainability</h3>
+				</section>
+				<section>
+					<h4>Current Setup</h4>
+					<ul>
+						<li> <a href="https://github.com/TEIC/TEIgarage">TEIC/TEIGarage</a> und <a
+								href="https://github.com/Edirom/MEIgarage">Edirom/MEIGarage</a></li>
+						<li><a href="https://github.com/Edirom/MEIGarage/blob/main/doc/code-structure.md">modules and
+								plugins</a></li>
+						<li>community meetings</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Deployment</h4>
+					<ul>
+						<li>Using <a href="https://github.com/orgs/Edirom/packages">GitHub Registry</a> for artifacts,
+							later Maven Central
+						</li>
+						<li><a href="https://github.com/Edirom/MEIGarage/actions">CI</a> using GitHub Actions, Maven,
+							Docker</li>
+						<li><a href="https://hub.docker.com/r/edirom/meigarage">Docker</a>
+							and Kubernetes</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Documentation and Maintenance</h4>
+					<ul>
+						<li>Documentation for users</li>
+						<li>Documentation for developers and maintainers</li>
+						<li>maintenance of plugins by their authors</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Checklists and Badges</h4>
+					<small>
+						<ul>
+							<li><a href="https://www.fair-software.eu/">fair-software.eu</a></li>
+							<ul>
+								<li>repository: GitHub</li>
+								<li>license</li>
+								<li>community registry: <a
+										href="https://nfdi4culture.de/what-we-do/services.html#service-3">nfdi4c
+										software
+										registry</a> is currently being developed</li>
+								<li>citation:CFF File</li>
+								<li>checklist: open ssf best practices</li>
+							</ul>
+							<li><a href="https://bestpractices.coreinfrastructure.org">open ssf best practices badge</a>
+						</ul>
+					</small>
+					<p class="left"></p><a href="https://bestpractices.coreinfrastructure.org/projects/6279"><img
+						src="https://bestpractices.coreinfrastructure.org/projects/6279/badge"
+						height="30"></a>
+				</section>
+			</section>
+			<section data-background-color="#1e888aff">
+				<section>
+					<h3>Integration of community specific code using plugins</h3>
+				</section>
+				<section>
+					<h4>Example meico</h4>
+					<ul>
+						<li><a href="https://github.com/cemfi/meico">cemfi/meico</a></li>
+						<li><a href="https://github.com/Edirom/meico-converter">Edirom/meico-converter</a></li>
+						<li>Conversions to and from MPM, MSM, MP3, MIDI</li>
+					</ul>
+				</section>
+			</section>
+			<!-- Contact -->
+			<section data-background-color="#1e888aff">
+				<section>
+					<h4>Links</h4>
+					<ul>
+						<li><a href="https://www.fair-software.eu/">fair-software.eu</a></li>
+						<li><a href="https://bestpractices.coreinfrastructure.org">open ssf best practices</a></li>
+					</ul>
+				</section>
+			</section>
+		</div>
+	</div>
+	<script src="../reveal/dist/reveal.js"></script>
+	<script src="../reveal/plugin/notes/notes.js"></script>
+	<script src="../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});</script>
+	<style type="text/css">
+		/* 1. Style header/footer <div> so they are positioned as desired. */
+		#header-left {
+			position: absolute;
+			top: 1%;
+			left: 1%;
+			font-size: 20px;
+		}
+
+		#header-right {
+			position: absolute;
+			top: 0%;
+			right: 0%;
+		}
+
+		#footer-left {
+			position: absolute;
+			bottom: 0%;
+			left: 1%;
+		}
+	</style>
+
+	<!-- 2. Create hidden header/footer <div> -->
+	<div id="hidden" style="display:none;">
+		<div id="header">
+			<div id="header-left">MEIGarage | deRSE23</div>
+			<!-- <div id="header-right">HEADER-RIGHT</div> -->
+			<div id="footer-left"><a id="nfdi4cLink" href="https://nfdi4culture.de" target="_blank"><img
+						src="https://nfdi4culture.de/typo3conf/ext/culture_portal/Resources/Public/Build/images/n4c-logo-white.7dd674fa.svg"
+						alt="Logo NFDI for Culture" height="50" /></a></div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+		var header = $('#header').html();
+		if (window.location.search.match(/print-pdf/gi)) {
+			Reveal.addEventListener('ready', function (event) {
+				$('.slide-background').append(header);
+			});
+		}
+		else {
+			$('div.reveal').append(header);
+		}
+	</script>
+
+</body>
+
+</html>
