@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Sustainable Infrastructure: TEIGarage and MEIGarage</title>
+	<meta name="description" content="Presentation">
+	<meta name="author" content="Anne Ferger">
+	<link rel="stylesheet" href="../reveal/dist/reset.css">
+	<link rel="stylesheet" href="../reveal/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal/dist/theme/night.css">
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	<!-- Printing and PDF exports -->
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-color="#1e888aff">
+				<h3>Building sustainable infrastructure for scholarly communities</h3>
+				<h4>Best practices for empowering research with collaboration in the TEI and MEI context using XGarage</h4>
+				<p><a id="teiLink" href="https://tei-c.org" target="_blank"><img alt="Text Encoding Initiative"
+							id="teiLogo" src="https://tei-c.org/Vault/Logo_2023/website/TEI_Logo.svg" width="105"
+							height="90" /></a>
+							<a id="meiLink" href="https://music-encoding.org" target="_blank"><img
+								alt="Music Encoding Initiative" id="meiLogo"
+								src="https://music-encoding.org/pix/meilogo-inverted.png" height="69" /></a>
+						<a id="vifeLink" href="https://edirom.de" target="_blank"><img alt="ViFE" id="vifeLogo"
+								src="https://meigarage.edirom.de/img/vife-logo.5a29fca4.svg" height="69" /></a>
+								<a id="nfdi4cLink" href="https://nfdi4culture.de" target="_blank"><img
+									src="https://nfdi4culture.de/typo3conf/ext/culture_portal/Resources/Public/Build/images/n4c-logo-white.7dd674fa.svg"
+									alt="Logo NFDI for Culture" height="69" /></a>
+				</p>
+				<p>
+					<small>Peter Stadler and Anne Ferger | Paderborn University</small>
+				</p>
+				<p>
+					<small>Slides: <a
+							href="https://anneferger.github.io/MEITEIGarage/TEIMEC23/">anneferger.github.io/MEITEIGarage/TEIMEC23/</a></small>
+				</p>
+			</section>
+			<section data-background-color="#FFFFFF" style="color:#1e888aff">
+				<section>
+					<h3 style="color:#1e888aff">How can the infrastructure of TEIGarage and MEIGarage (formerly OxGarage) best be sustained?</h3>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Challenges and practices of sustaining TEIGarage & MEIGarage</h4>
+					<br/>
+					<ul>
+						<li>MEIGarage & TEIGarage (formerly <b>OxGarage</b>)</li>	
+						<li><b>Sustainability</b> of Software and Infrastructure</li>						
+						<li><b>Deployment</b>, Virtualisation and Containerisation</li>
+						<li>Best <b>practices</b> for sustainable infrastructure</li>
+					</ul>
+				</section>
+			</section>
+			<section data-background-color="#FFFFFF" style="color:#1e888aff">
+				<section>
+					<h3 style="color:#1e888aff">MEIGarage & TEIGarage (formerly OxGarage)</h3>
+				</section>
+				<section>			
+					<h4 style="color:#1e888aff">OxGarage</h4>
+					<p><b>OxGarage</b> is a webservice and framework to manage <b>transformations and validations</b> between a variety of text formats and can be used via an online interface or by calling the API (Application Programming Interface). Its plugin setup allows for integration of further transformations of different file formats. The code base of <b>OxGarage</b> is over 10 years old. </p>
+				</section>
+				<section>			
+					<h4 style="color:#1e888aff">OxGarage on the way to TEIGarage and MEIGarage</h4>
+					<p>In <b>2018</b> in an TEI effort of containerization of services a Dockerization of the software took place. 
+						In <b>2019</b> work commenced on a MEI-specific OxGarage, referred to as <b>MEIGarage</b>. Around <b>2022</b> after structural work on the codebase the TEI OxGarage acquired the new name <b>TEIGarage</b>.
+					</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Usage of TEIGarage</h3>
+					<img data-src="images/input_output_oct_to_may.png" height="600" width="805" />
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Examples of tools using TEIGarage</h3>
+					<ul>
+						<li><a href="https://roma.tei-c.org/">Roma</a></li>
+						<li><a href="https://github.com/ADHO/dhconvalidator">DH Convalidator</a></li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Recent structural work on the codebase</h4>
+					<ul>
+						<li>extracted different parts/modules to their own git repositories
+							while keeping the (git) history of only those parts</li>
+						<li>storing artifacts (jars) of the modules in GitHub Packages directly</li>
+						<li>allowing for collaboration on common elements and keeping
+							configuration and specific functionality separate</li>
+					</ul>
+					<p>➞ facilitated development on specific parts only</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Elements of the Garages</h3>
+					<img data-src="images/structure.png" height="613" width="684" />
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Finding out more about the software:</h3>
+					<ul>
+						<li>Presentation slides and posters of the recent developments can be found at <a href=https://anneferger.github.io/MEITEIGarage>anneferger.github.io/MEITEIGarage</a></li>
+						<li>MEIGarage and TEIGarage <a
+								href="https://github.com/Edirom/MEIGarage/blob/main/doc/code-structure.md">code
+								structure</a>
+						</li>
+						<li>We welcome you to <a href="#/contact">get in touch</a> if you want to integrate existing transformations!</li>
+					</ul>
+				</section>
+			</section>
+			<section data-background-color="#FFFFFF" style="color:#1e888aff">
+				<section>
+					<h3 style="color:#1e888aff">Sustainability of Software and Infrastructure</h3>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Software vs. Infrastructure</h4>
+					<ul>
+						<li>Central deployment and Garage framework as a <b>technical form of infrastructure</b></li>
+						<li>Software as the basis for deployment and infrastructure</li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Aspects of Sustainability</h4>
+					<ul>
+						<li>Triple bottom line:</li>
+						<ul>
+							<li>Social sustainability</li>
+							<li>Economic sustainability</li>							
+							<li>Ecological sustainability</li>
+						</ul>
+						<li>Technical sustainability</li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Social sustainability</h4>
+					<p>Benefit to research communities</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Economic sustainability: Funding and costs</h4>
+					<p>Long-term Funding and costs</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Ecological sustainability: Ecological impact of infrastructure</h4>
+					<p>Ecological impact of infrastructure</p>
+					<p>See the <a href="https://dhd-greening.github.io/">AG Greening DH</a> for recent work on this in the Digital Humanities</p>
+					<p>we try to avoid superfluous builds and deployments</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Technical sustainability</h4>
+					<p>Sustaining and maintaining infrastructure long-term</p>
+					<p>See measures for a sustainable codebase in <a href="https://anneferger.github.io/MEITEIGarage/deRSE23/">these slides</a></p>
+				</section>
+			</section>
+			<section data-background-color="#FFFFFF" style="color:#1e888aff">
+				<section>
+					<h3 style="color:#1e888aff">Deployment, Virtualisation and Containerisation</h3>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Virtualisation and Containerisation</h4>
+					<ul>
+						<li>Building using Docker, Dockerfiles, Dockerimages</li>
+						<li>Continuous Integration (CI) and Continuous Deployment using GitHub Actions</li>
+						<li>Cluster for Deployment of Docker images using Kubernetes</li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Advantages of a central deployment</h4>
+					<ul>
+						<li>reproducible research (e.g. concerning versions of guidelines and stylesheets)</li>
+						<li>low-threshold interface</li>
+						<li>permanent API endpoint</li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Costs of a central deployment</h4>
+					<ul>
+						<li>Hardware (Servers)</li>
+						<li>Basic Software Infrastructure for container orchestration and virtualisation</li>
+						<li>Maintainers</li>
+					</ul>
+				</section>
+			</section>
+			<section data-background-color="#FFFFFF" style="color:#1e888aff">
+				<section>
+					<h3 style="color:#1e888aff">(Best) practices for sustainable infrastructure</h3>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">MEIGarage and TEIGarage in practice</h4>
+					<ul>
+						<li>central deployments</li>
+						<ul>
+							<li><a href="https://meigarage.edirom.de/">meigarage.edirom.de</a></li>
+							<li><a href="https://teigarage.tei-c.org/">teigarage.tei-c.org</a></li>
+						</ul>
+						
+						<li>Dockerfiles</li>
+						<ul>
+							<li><a href="https://github.com/Edirom/MEIGarage/blob/main/Dockerfile">github.com/Edirom/MEIGarage/blob/main/Dockerfile</a></li>
+							<li><a href="https://github.com/TEIC/TEIGarage/blob/main/Dockerfile">github.com/TEIC/TEIGarage/blob/main/Dockerfile</a></li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">MEIGarage and TEIGarage in practice</h4>
+					<ul>
+						<li>Servers</li>
+						<ul>
+							<li>Cluster at Paderborn University managed by  <a href="https://www.edirom.de/">ViFE (Virtueller Forschungsverbund Edirom)</a></li>
+							<li>French Research Infrastructure Huma-Num <a href="https://www.huma-num.fr/">huma-num.fr</a></li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Sharing of knowledge, workload and responsibility</h4>
+					<p><a href="https://tei-c.org/activities/infrastructure-group/">TEI Infrastructure Group </a> 
+						as an example for collaborating on infrastructure</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Deployment</h4>
+					<p>Potential for further automation: DNS setup</p>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Monitoring of infrastructure</h4>
+					<ul>
+						<li>Different because of different server setup</li>
+						<li>Also important for generating statistics</li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Server setup</h4>
+					<ul>
+						<li>Different servers but same building and deployment process</li>
+						<li>persistent logs: also important for generating statistics</li>
+					</ul>
+				</section>
+				<section>
+					<h4 style="color:#1e888aff">Collaboration with community</h4>
+					<ul>
+						<li>Feature requests</li>
+						<li>statistics on usage</li>
+					</ul>
+				</section>
+			</section>
+			<!-- Contact -->
+			<section data-background-color="#FFFFFF" style="color:#1e888aff">
+				<section>
+					<h4 style="color:#1e888aff">References</h4>
+					<ul style="font-size:0.45em;">
+						<li>Anzt, H. et al. (2021) ‘An environment for sustainable research software in Germany and beyond: current state, open challenges, and call for action’. F1000Research. Available at: https://doi.org/10.12688/f1000research.23224.2.</li>
+						<li>Baillot, Anne et al.: „Digital Humanities and the Climate Crisis. A Manifesto“, Foregrounding the Climate Crisis Within Digital Humanities Work, https://dhc-barnard.github.io/dhclimate/ (accessed 24.04.2023).
+						</li>
+						<li>Burnard, L. (2013) ‘The Evolution of the Text Encoding Initiative: From Research Project to Research Infrastructure’, Journal of the Text Encoding Initiative [Preprint], (Issue 5). Available at: https://doi.org/10.4000/jtei.811.
+						</li>
+						<li>Hasselbring, W. et al. (2020) ‘From FAIR research data toward FAIR and open research software’, it - Information Technology, 62(1), pp. 39–47. Available at: https://doi.org/doi:10.1515/itit-2019-0040.
+						</li>
+						<li>Hong, N.P.C. et al. (2022) FAIR Principles for Research Software (FAIR4RS Principles). Available at: https://doi.org/10.15497/RDA00065.
+						</li>
+						<li>Penzenstadler, B. (2013) ‘Towards a definition of sustainability in and for software engineering’, in Proceedings of the 28th Annual ACM Symposium on Applied Computing. New York, NY, USA: Association for Computing Machinery (SAC ’13), pp. 1183–1185. Available at: https://doi.org/10.1145/2480362.2480585.
+						</li>
+						<li>Stadler, Peter, Ferger, Anne and Röwenstrunk, Daniel (2022) ‘From OxGarage to TEIGarage and MEIGarage’. Available at: https://doi.org/10.5281/ZENODO.7061525.
+						</li>
+						<li>Sverdrup, H. and Svensson, M.G.E. (2005) ‘Defining the Concept of Sustainability - a Matter of Systems Thinking and Applied Systems Analysis’, in M.-O. Olsson and G. Sjöstedt (eds) Systems Approaches and Their Application: Examples from Sweden. Dordrecht: Springer Netherlands, pp. 143–164. Available at: https://doi.org/10.1007/1-4020-2370-7_6.
+						</li>
+						<li>Venters, C. C. et al. (2014) ‘Software Sustainability: The Modern Tower of Babel’, RE4SuSy: Third International Workshop on Requirements Engineering for Sustainable Systems. Edited by B. Penzenstadler, M. Mahaux, and C. Salinesi. CEUR. Available at: https://eprints.whiterose.ac.uk/84941/.
+						</li>
+					</ul>
+				</section>
+				<section id="contact">
+					<h4 style="color:#1e888aff">Contact</h4>
+					<p></p>
+					<a href="https://anneferger.github.io/">Anne Ferger</a>
+					<p>
+						<a href="mailto:anne.ferger@uni-paderborn.de">anne.ferger@uni-paderborn.de</a>
+					</p>
+					<p><a href="https://github.com/Edirom/MEIGarage/issues/new">Filing Issues for MEIGarage</a></p>
+					<p><a href="https://github.com/TEIC/TEIGarage/issues/new">Filing Issues for TEIGarage</a></p>
+				</section>
+			</section>
+		</div>
+	</div>
+	<script src="../reveal/dist/reveal.js"></script>
+	<script src="../reveal/plugin/notes/notes.js"></script>
+	<script src="../reveal/plugin/markdown/markdown.js"></script>
+	<script src="../reveal/plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});</script>
+		<style type="text/css">
+			/* 1. Style header/footer <div> so they are positioned as desired. */
+			#header-left {
+				position: absolute;
+				top: 1%;
+				left: 1%;
+				font-size: 20px;
+			}
+	
+			#header-right {
+				position: absolute;
+				top: 0%;
+				right: 0%;
+			}
+	
+			#footer-left {
+				position: absolute;
+				bottom: 0%;
+				left: 1%;
+			}
+		</style>
+	
+		<!-- 2. Create hidden header/footer <div> -->
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="header-left">Joint MEC TEI conference 2023</div>
+				<!-- <div id="header-right">HEADER-RIGHT</div> -->
+				<!--<div id="footer-left"><a id="nfdi4cLink" href="https://nfdi4culture.de" target="_blank"><img
+							src="https://nfdi4culture.de/typo3conf/ext/culture_portal/Resources/Public/Build/images/n4c-logo-white.7dd674fa.svg"
+							alt="Logo NFDI for Culture" height="50" /></a></div> -->
+			</div>
+		</div>
+	
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if (window.location.search.match(/print-pdf/gi)) {
+				Reveal.addEventListener('ready', function (event) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				$('div.reveal').append(header);
+			}
+		</script>
+</body>
+
+</html>
