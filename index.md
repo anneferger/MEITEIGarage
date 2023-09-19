@@ -6,7 +6,10 @@
 
 * First Open Community Meeting Apr 25 2022: "Further development on OxGarage" [Slides](https://anneferger.github.io/MEITEIGarage/community_meeting/)
 
-* [deRSE23 - Conference for Research Software Engineering in Germany](https://de-rse23.sciencesconf.org/): "MEIGarage as an example of collaboration on long-living research software in different research communities" [Slides](https://anneferger.github.io/MEITEIGarage/deRSE23)
+* [deRSE23 - Conference for Research Software Engineering in Germany](https://de-rse23.sciencesconf.org/): "MEIGarage as an example of collaboration on long-living research software in different research communities" [Slides](https://anneferger.github.io/MEITEIGarage/deRSE23/)
+
+* [Joint MEC TEI conference 2023](https://teimec2023.uni-paderborn.de/): "Building sustainable infrastructure for scholarly communities: Best practices for empowering research with collaboration in the TEI and MEI context using XGarage" [Slides](https://anneferger.github.io/MEITEIGarage/TEIMEC23/)
+
 
 ## Poster
 
